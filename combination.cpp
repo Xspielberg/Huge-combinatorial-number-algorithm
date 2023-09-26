@@ -7,7 +7,7 @@
 using namespace std;
 static long long n,m;
 static int size=0,cnt;
-static int A[X],B[X];//for high¡ªprecision calculation 
+static int A[X],B[X];//for highÂ¡Âªprecision calculation 
 static int primes[Y],totid[Y];//the factors and the index of factors of combination
 static int is_P[Z];//prime<=>0
  
@@ -56,7 +56,7 @@ long long c(int n,int m)
 {
     if (m==0) return 1%p0;
     if (n==0) return 0;
-    if (n>=p0||m>=p0) return c(n/p0,m/p0)*c(n%p0,m%p0)%p0;//Â¬¿¨Ë¹¶¨ÀíºËÐÄÓï¾ä
+    if (n>=p0||m>=p0) return c(n/p0,m/p0)*c(n%p0,m%p0)%p0;//Lucas Law
     long long x=1,y=1;
     for (int i=n;i>=n-m+1;i--) x=x*i%p0;
     for (int i=1;i<=m;i++) y=y*i%p0;
